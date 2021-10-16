@@ -50,7 +50,7 @@ function getAverageRGB(element) {
   rgb.b = ~~(rgb.b / count);
 
   document.getElementsByClassName("img-text"); 
-  element.getElementsByClassName("portfolio-item")[0].style.boxShadow= "5px 10px 15px  rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")" ;
+  element.getElementsByClassName("portfolio-item")[0].style.boxShadow= "10px 15px 20px  rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")" ;
  
 
   console.log( rgb);

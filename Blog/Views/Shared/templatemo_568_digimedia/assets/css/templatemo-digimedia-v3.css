@@ -1526,9 +1526,9 @@ Portfolio
 
 .portfolio-item:hover{
   background-position: 100% 0; 
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out; 
+    -o-transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out; 
     /* box-shadow: 0 4px 15px 0 rgba(140, 78, 227, 1); */
 
    
@@ -1577,6 +1577,14 @@ Portfolio
   border-top-left-radius: 23px;
   overflow: hidden;
 }
+
+/* tuankhoi da sưa */
+.portfolio-item .thumb img{
+  width: 386px;
+  height: 386px;
+  object-fit: contain;
+}
+/*END tuankhoi da sưa */
 
 .portfolio-item .down-content {
   background-color: #fff;
