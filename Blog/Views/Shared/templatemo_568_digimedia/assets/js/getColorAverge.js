@@ -54,7 +54,7 @@ function getAverageRGB(element) {
 
  
 
-const listElement = document.getElementsByClassName("portfolio-item");
+const listElement = document.getElementsByClassName("shawdow-color-by-img");
 
 for (let item of listElement){
   
@@ -65,7 +65,7 @@ for (let item of listElement){
   att.value = "rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")"; // Set the value of the class attribute
   item.setAttributeNode(att);
 
-  item.style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+',.2)';
+  // item.style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+',.2)';
 
   // console.log(item.getAttribute("data-shadow-color"));
  

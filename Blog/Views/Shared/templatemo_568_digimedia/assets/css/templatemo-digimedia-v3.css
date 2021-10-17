@@ -1582,7 +1582,7 @@ Portfolio
 .portfolio-item .thumb img{
   width: 100%;
   height: 386px;
-  object-fit: contain;
+  object-fit: cover;
 }
 /*END tuankhoi da sưa */
 
