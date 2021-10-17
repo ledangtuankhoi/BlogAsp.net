@@ -1,10 +1,8 @@
-// var rgb = getAverageRGB(document.getElementById('i'));
-// document.body.style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
 
 
-function getAverageRGB(element) {
-  // console.log(element.getElementsByTagName("img")[0]);
-  // console.log(element);
+
+
+function getAverageRGB(element) { 
   imgEl = element.getElementsByTagName("img")[0];
   var blockSize = 5, // only visit every 5 pixels
     defaultRGB = { r: 0, g: 0, b: 0 }, // for non-supporting envs
@@ -49,14 +47,41 @@ function getAverageRGB(element) {
   rgb.g = ~~(rgb.g / count);
   rgb.b = ~~(rgb.b / count);
 
-  document.getElementsByClassName("img-text"); 
-  element.getElementsByClassName("portfolio-item")[0].style.boxShadow= "10px 15px 20px  rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")" ;
- 
-
-  console.log( rgb);
+   
+  return rgb;
 }
 
-function  shadowNomal(element) {
-    element.getElementsByClassName("portfolio-item")[0].style.boxShadow= "rgb(255 255 255) 5px 10px 15px " ;
-    console.log("end");
+
+ 
+
+const listElement = document.getElementsByClassName("portfolio-item");
+
+for (let item of listElement){
+  
+   var rgb = getAverageRGB(item);
+    // console.log(rgb.r);
+
+  var att = document.createAttribute("data-shadow-color"); // Create a "class" attribute
+  att.value = "rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")"; // Set the value of the class attribute
+  item.setAttributeNode(att);
+
+  // console.log(item.getAttribute("data-shadow-color"));
+ 
+}
+ 
+
+function  showShawdow(element){
+  var colorShadow = element.getAttribute("data-shadow-color");
+  // console.log(element);
+  // console.log("showshadow"+colorShadow);
+
+  element.style.boxShadow= "10px 15px 20px  "+colorShadow.toString() +"" ; 
+  // console.log(colorShadow);
+}
+
+
+function shadowNomal(element) {
+  element.style.boxShadow =
+    "rgb(255 255 255) 5px 10px 15px ";
+  // console.log("shadowNomal"+element);
 }
